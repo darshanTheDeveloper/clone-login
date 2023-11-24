@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Comic+Neue&family=Noto+Color+Emoji&family=Poppins&family=Prompt&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    height: 100dvh;
+    background-color: #000000;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d1d1d;
+    flex: 0.2;
+    margin: 0.6em 0 0.6em 0.6em !important;
+    border-radius: 1em;
+    padding: 0 1em 0 1em;
+}
+
+
+main {
+    background-color: #1d1d1d;
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6em;
+    border-radius: 1em;
+}
+
+
+main input {
+    display: block;
+}
+
+nav div {
+    margin-top: 4em;
+    width: fit-content;
+    aspect-ratio: 1;
+    width: -moz-fit-content;
+    background-color: springgreen;
+    display: grid;
+    place-items: center;
+}
+
+main form {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 0 5px;
+}
+
+main form input {
+    background-color: transparent;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid springgreen;
+    border-radius: 10px;
+    color: springgreen;
+}
+
+main input:focus,
+main input:hover,
+main input:active {
+    border: 1px solid springgreen;
+    outline: none;
+    background-color: transparent;
+}
+
+
+nav div:first-child {
+    padding: 10px 10px;
+    border-radius: 50%;
+}
+
+nav>div:first-child>a,
+nav>div:last-child>a {
+    color: rgb(31, 31, 31);
+    text-decoration: none;
+    font-weight: 900;
+    text-align: center;
+}
+
+
+nav div:last-child {
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    background-color: springgreen;
+}
+
+
+.card-btn {
+    border: none;
+    background-image: linear-gradient(to left, rgb(62, 17, 104), rgb(132, 0, 255), rgb(255, 0, 106));
+    font-weight: 900;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+
+.pop-up {
+    background-image: url('../images/background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: auto auto;
+    font-family: 'Anton', sans-serif;
+    position: absolute;
+    color: blanchedalmond;
+    left: 20%;
+    right: 20%;
+    top: 40%;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 40px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.pop-up a,
+.pop-up button {
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    width: -moz-fit-content
+}
+
+.pop-up>h1 {
+    display: grid;
+    place-items: center;
+    font-size: 5rem;
+    grid-row: span 2;
+    color: springgreen;
+}
+
+
+@media (max-width:700px) {
+    body {
+        flex-direction: column;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0.6em !important;
+        margin-bottom: 0 !important;
+        border-radius: 50px;
+    }
+
+
+    main form {
+        width: 70%;
+    }
+
+    .nav div:first-child,
+    .nav div:last-child {
+        margin: 0;
+        background-color: transparent;
+    }
+
+    nav>div:first-child>a,
+    nav>div:last-child>a {
+        color: white;
+    }
+
+    nav>div:first-child>a:hover,
+    nav>div:last-child>a:hover {
+        color: springgreen;
+    }
+
+    .pop-up {
+        left: 10%;
+        right: 10%;
+        top: 40%;
+        padding: 40px 1.6em;
+    }
+}
+
+@media (min-width:799px) {
+    .pop-up {
+        left: 30%;
+        right: 30%;
+        top: 40%;
+    }
+}

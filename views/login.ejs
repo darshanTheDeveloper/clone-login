@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+    <nav class="nav">
+        <div class="login">
+            <a href="/">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+        <div class="login">
+            <a href="/login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <form action="/login" method="post">
+            <div>
+                <input type="email" placeholder="Email" name="email" required> <br>
+                <input type="password" placeholder="Password" minlength="8" maxlength="16" name="password" required>
+            </div>
+            <button type="submit" class="card-btn btn btn-success">GENERATE CARD</button>
+        </form>
+    </main>
+    <% if (locals.isExist) { %>
+        <div class="pop-up">
+            <div>
+                <h1>
+                    <%= firstName %>
+                        <%= lastName %>
+                </h1>
+                <p>
+                    <%= email%>
+                </p>
+            </div>
+            <h1><%= firstName[0] %></h1>
+            <button class="pop-up-card btn btn-success" type="submit"><a href="/login">OK</a></button>
+        </div>
+
+        <% } %>
+
+
+            <%- include('partials/footer.ejs') %>
