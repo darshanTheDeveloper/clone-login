@@ -46,6 +46,6 @@ app.post('/login',async (req,res)=>{
      res.render('login.ejs',data)
 })
 
-app.listen(port,()=>{
+app.listen(process.env.PORT||port,()=>{
     console.log(`server is running on ${port}`)
 })
